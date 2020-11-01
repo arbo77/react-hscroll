@@ -3,8 +3,8 @@ import React from 'react'
 
 import { List } from 'react-hscroll'
 
-const Item = () => {
-  return <div style={{ padding: '1rem',height: 100, width: 100, background: 'whitesmoke' }}>Create React Library Example 😄</div>
+const Item = (props) => {
+  return <div key={props?.key} style={{ padding: '1rem',height: 100, width: 100, background: 'whitesmoke' }}>Create React Library Example 😄</div>
 }
 const sample = []
 for (let i = 1; i <= 12; i++) {

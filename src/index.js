@@ -95,7 +95,9 @@ export const List = ({ items, component, gap, flow }) => {
     <StyledHList className={flow} gap={gap}>
       <div className='h'>{isLeft && <div>&laquo;</div>}</div>
       <div className='w' onScroll={onScroll}>
-        <div className='c'>{data?.map((item) => component(item))}</div>
+        <div className='c'>
+          {data?.map((item, idx) => component({ data: item, key: idx }))}
+        </div>
       </div>
       <div className='h'>{isRight && <div>&raquo;</div>}</div>
     </StyledHList>
